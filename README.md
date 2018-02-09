@@ -1,53 +1,10 @@
 # Ember-a11y-loading-focus-issue
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+When drilling down from '/' into '/foo/bar', the 'foo/loading.hbs` template gets focused, but `foo/bar.hbs never does.
 
-## Prerequisites
-
-You will need the following things properly installed on your computer.
-
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd ember-a11y-loading-focus-issue`
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+1. Start ember server
+2. Go to '/'
+3. Click on "Foo", observe that both the loading state and the foo template receive focus
+4. Go back to '/'
+5. Click on "Bar"
+6. Observe that the foo loading template receives focus, but the bar template never does
